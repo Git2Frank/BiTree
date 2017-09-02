@@ -1,11 +1,11 @@
-#BiTree
+# BiTree
 二叉树的遍历
 
-###To Build
+### To Build
 ```
     user> make
     user> make debug=y
 ```
 
-###License
+### License
 AGPL-3.0
