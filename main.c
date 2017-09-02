@@ -1,6 +1,6 @@
 /*
-18.Traversal of Binary Tree 
-v 1.3.2
+18.Traversal of Binary Tree äºŒå‰æ•°çš„éå†
+v 1.3.3
 LICENSE:  AGPL-3.0
 */
 //#define DEBUG 
@@ -15,38 +15,32 @@ int main(int argc, char *argv[]) {
 	puts("  Traversal of Binary Tree");
 	puts("- - - - - - - - - - - - - - -");
 	puts("  Version	1.3.2\n  Author	iFrank\n  License	AGPL-3.0");
-	puts("=============================");
-	puts("Please enter your binary tree data in PREORDER to continue. Don't forget empty tree flag.");
+	puts("=============================\n");
+	puts("Please enter your binary tree data in PREORDER to continue. \nDon't forget empty tree flag.\n");
 
-	Node *T;  //¶ş²æÊ÷Ê÷¸ù½áµãÖ¸Õë
+	Node *T;  //äºŒå‰æ ‘æ ‘æ ¹ç»“ç‚¹æŒ‡é’ˆ
 	if(createBiTree(&T) == RUN_ERROR){
 		return RUN_ERROR;
 	}
-	puts("OK, GET IT.\n");
-	while (getchar() != '\n');
-	puts("Pless press ENTER to PreOrder.");
-	while (getchar() != '\n');
+	puts("OK, GET IT.");
 	
+	puts("\nPreOrder:");
 	PreOrder(T);
-	puts("\nPreOrder DONE.\n");
-	puts("Pless press ENTER to InOrder.");
-	while (getchar() != '\n');
 
+	puts("\n\nInOrder:");
 	InOrder(T);
-	puts("\nInOrder DONE.\n");
-	puts("Pless press ENTER to PostOrder.");
-	while (getchar() != '\n');
-	
+
+	puts("\n\nPostOrder:");
 	PostOrder(T);
-	puts("\nPostOrder DONE.\n");
-	puts("Pless press ENTER to LevelOrder.");
-	while (getchar() != '\n');
 
+	puts("\n\nLevelOrder:");
 	LevelOrder(T);
-	puts("\nLevelOrder DONE.\n");
-	puts("Pless press ENTER to Exit.");
+	
+	freeBiTree(T);
+
+	puts("\n\nAll done. Pless press ENTER to Exit.");
+	while (getchar() != '\n');
 	while (getchar() != '\n');
 
-	freeBiTree(T);
 	return 0;
 }

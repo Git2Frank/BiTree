@@ -1,26 +1,26 @@
-#define EMPTY_TREE (-1) //¿ÕÊ÷±êÊ¶
-#define SQ_MAXSIZE 32 //¶ÓÁĞÊı×é´óĞ¡
+#define EMPTY_TREE (-1) //ç©ºæ ‘æ ‡è¯†
+#define SQ_MAXSIZE 32 //é˜Ÿåˆ—æ•°ç»„å¤§å°
 /*ERROR CODE*/
 #define RUN_OK 1
 #define RUN_ERROR 2
 
-//½ÚµãÊı¾İÀàĞÍ£¬¿ÉÒÔ¸ù¾İĞèÒªĞŞ¸Ä¡£²»¹ı»¹ĞèÊÖ¶¯ĞŞ¸ÄscanfºÍprintfÀïµÄÕ¼Î»·û¡£
+//èŠ‚ç‚¹æ•°æ®ç±»å‹ï¼Œå¯ä»¥æ ¹æ®éœ€è¦ä¿®æ”¹ã€‚ä¸è¿‡è¿˜éœ€æ‰‹åŠ¨ä¿®æ”¹scanfå’Œprintfé‡Œçš„å ä½ç¬¦ã€‚
 typedef int ElemType ;  
-//¶ş²æÊ÷½áµã
+//äºŒå‰æ ‘ç»“ç‚¹
 typedef struct TreeNode{
 	ElemType element;
 	struct TreeNode *lChild;
 	struct TreeNode *rChild;
 }Node;
-//Á´Ê½¶ÓÁĞ ÓÃÓÚ²ãĞò±éÀú
+//é“¾å¼é˜Ÿåˆ— ç”¨äºå±‚åºéå†
 typedef struct Queue{
 	Node *NodeQ[SQ_MAXSIZE];
-	struct Queue *NextQ;  //Ö¸ÏòÏÂÒ»¶ÓÁĞ¿éµÄÖ¸Õë
+	struct Queue *NextQ;  //æŒ‡å‘ä¸‹ä¸€é˜Ÿåˆ—å—çš„æŒ‡é’ˆ
 }Queue;
 
-//º¯ÊıÉùÃ÷
+//å‡½æ•°å£°æ˜
 int createBiTree(Node **);
-void freeBiTree(Node *T);
+void freeBiTree(Node *);
 int printNode(Node *);
 void PreOrder(Node *);
 void InOrder(Node *);
